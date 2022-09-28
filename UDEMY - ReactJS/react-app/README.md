@@ -60,6 +60,46 @@ class HelloWorld extends React.Component{
     - Add to "start" and "build" in scripts (package.json)
         - "yarn build:css && react-scripts start"
         - "yarn build:css && react-scripts build"
-    
     - Restart app with "yarn start"
     - Remove App.css as we don't need it anymore and replace imports of App.css to tailwind.css
+
+3. Create a Menu component
+    - Create Navigation.js
+    - Install fontawesome packages (https://fontawesome.com/docs/web/use-with/react/)
+    - Use state to control hamburger dropdown menu component
+    - Create hook to change state of showMenu for Navigation 
+    - Use state to open dropdown list and reveal new component
+    - Added menu mask to differentiate menu and main page
+    - Added onClick to mask where if clicked, menu will be closed
+
+4. Animating the Menu Component (with React Spring)
+    - Add import package (import { useTransition, animated } from 'react-spring') which will break the app 
+        - Fix: yarn add react-spring then rebuild and start app
+    - Use fade transition for the menu dropdown list
+        - Adding the mask and onClick to close the menu
+    - Added CSS for dropdown menu and used transformX to make the list slide in from the left   
+
+5. React Router (Change content on the page, Change URL)
+    - Add react-router (yarn add react-router-dom <- for websites {react-router-native <- for native apps})
+    - Import dependencies to App.js
+        - import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
+    - Used Routes to list multiple Route with custom URLs
+    - Appended the links to routes under the dropdown menu
+    - Add new file "NavigationMenu" to hold menu list components
+        - Import NavigationMenu to Navigation
+        - Import Link dependency to NavigationMenu instead
+        - Advantages: 
+            - Looks cleaner and simpler
+            - If a menu item is to be changed, changes can be easily made in NavigationMenu
+            - Easy for other developers to learn
+    - In NavigationMenu, replace onClick({() => setShowMenu(false)} to {props.closeMenu})
+        - Add closeMenu = {() => setShowMenu(false)} in the NavigationMenu tag in Navigation
+            - Passes the function to the child component (NavigationMenu)
+    - Create new files Home.js and About.js
+        - Use tags for these file routes in App.js 
+        - Cleaner code

@@ -7,10 +7,15 @@ module.exports = {
     "./src/Components/CounterExample.js",
     "./src/Components/Header.js",
     "./src/Components/HelloWorld.js",
-    "./src/Components/Footer.js"
+    "./src/Components/Footer.js",
+    "./src/Components/Navigation.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor:{
+        'black-t-50': 'rgba(0,0,0,0.5)',
+      }
+    },
   },
   plugins: [],
 }
