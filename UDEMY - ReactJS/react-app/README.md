@@ -36,5 +36,30 @@ class HelloWorld extends React.Component{
     - useState takes one argument (the value we want to store in state)
 - Class based approach: Make use of **state** in the constructor of the class
 
+# 2. Build a Mobile Menu
 
-13. Yarn commands tend to be shorter, less output in the command line
+1. Yarn commands tend to be shorter, less output in the command line
+
+2. Tailwind CSS - JavaScript configurable CSS (since we're building a JS app, it's nice to have CSS that's also configurable) [https://tailwindcss.com/docs/installation/using-postcss]
+
+
+    - npm install -D tailwindcss
+        - package.json includes dependency for tailwindcss   
+        - index.css is imported in index.js file which we will be using (index.js)
+    - Remove all contents in index.css and replace with tailwind decorators
+    - tailwind.config.js
+        - Where we will start defining any custom classes that don't ship with tailwind
+    - postcss.config.js
+        - paste code in tailwindcss docs
+
+    - Add these two lines in package.json (under the scripts json object)
+        - "build:css": "postcss src/index.css -o src/tailwind.css",
+        - "watch:css": "postcss src/index.css -o src/tailwind.css -w"
+        - These lines will search for src/index.css and create a tailwind.css file (Check for yourself :D)
+
+    - Add to "start" and "build" in scripts (package.json)
+        - "yarn build:css && react-scripts start"
+        - "yarn build:css && react-scripts build"
+    
+    - Restart app with "yarn start"
+    - Remove App.css as we don't need it anymore and replace imports of App.css to tailwind.css
