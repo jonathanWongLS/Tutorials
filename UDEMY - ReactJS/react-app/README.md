@@ -107,6 +107,7 @@ class HelloWorld extends React.Component{
 6. Fetch data from API
     - Used wildcard "/:id" in route to product page
     - To send a request, we use an HTTP library, axios (yarn add axios)
+        - Axios is a JavaScript promise based HTTP client. This us to make get, post, put and delete requests to an API.
     - Used hook state to set product shown in "product" page
     - Used useEffect: 1st argument is the function to run, 2nd argument is the variable we want to monitor, if changed, we want that data to be used
     - Set content to show if product is not null
@@ -116,3 +117,7 @@ class HelloWorld extends React.Component{
     - Change null in useState argument to an object: loading<boolean> & data<object>
     - Created new file Loader.js (the div for the CSS loader) to be added into the Product page
     - Add CSS for the loader in index.css
+
+8. Fetch from a list of data
+    - Used map function to display the first images in the list of all products
+    - Created file named ProductCard which defines how a card displays the contents of a specific product  

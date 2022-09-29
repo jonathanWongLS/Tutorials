@@ -9,6 +9,7 @@ function Product() {
     const [product, setProduct] = useState({
         loading: false,
         data: null,
+        error: false
     })
 
     let content = null
@@ -16,16 +17,29 @@ function Product() {
     useEffect(() => {
         setProduct({
             loading:true,
-            data:null
+            data:null,
+            error: false
         })
         axios.get(url).then(response => {
             setProduct({
                 loading:false,
-                data: response.data
+                data: response.data,
+                error: false
+            })
+        })
+        .catch(error => {
+            setProduct({
+                loading: false,
+                data: null,
+                error:true
             })
         })
     }, [url])
     
+    if (product.error) {
+        content = <p>There was an error please refresh or try again later</p>
+    }
+
     if (product.loading) {
         content = <Loader></Loader>
     }
@@ -38,7 +52,7 @@ function Product() {
             </h1>
             <div>
                 <img
-                    src={product.data.images}
+                    src={product.data.images[0].imageURL}
                     alt={product.data.name}
                 />
             </div>

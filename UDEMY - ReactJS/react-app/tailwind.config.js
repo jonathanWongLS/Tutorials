@@ -8,7 +8,12 @@ module.exports = {
     "./src/Components/Header.js",
     "./src/Components/HelloWorld.js",
     "./src/Components/Footer.js",
-    "./src/Components/Navigation.js"
+    "./src/Components/Navigation.js",
+    "./src/Components/NavigationMenu.js",
+    "./src/Components/ProductCard.js",
+    "./src/Views/Home.js",
+    "./src/Views/About.js",
+    "./src/Views/Product.js",
   ],
   theme: {
     extend: {
