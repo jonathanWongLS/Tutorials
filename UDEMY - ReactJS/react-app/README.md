@@ -120,4 +120,9 @@ class HelloWorld extends React.Component{
 
 8. Fetch from a list of data
     - Used map function to display the first images in the list of all products
-    - Created file named ProductCard which defines how a card displays the contents of a specific product  
+    - Created file named ProductCard which defines how a card displays the contents of a specific product
+
+9. Create custom hook
+    - Created useAxiosGet that does the HTTP request to GET data of products.
+    = Renamed variable and method in useState to a common name, request and setRequest.
+    - Applied the Don't Repeat Yourself (DRY) rule
