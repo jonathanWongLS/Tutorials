@@ -113,4 +113,6 @@ class HelloWorld extends React.Component{
     - Used useParams from router library to change the product id dynamic variable
 
 7. CSS loader for HTTP requests and handle errors on failed requests
-    - 
+    - Change null in useState argument to an object: loading<boolean> & data<object>
+    - Created new file Loader.js (the div for the CSS loader) to be added into the Product page
+    - Add CSS for the loader in index.css

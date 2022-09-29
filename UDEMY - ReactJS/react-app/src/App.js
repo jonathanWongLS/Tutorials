@@ -27,7 +27,7 @@ function App() {
             <Route path='/product/:id' caseSensitive={false} element={<Product/>}>
             </Route>
           </Routes>
-          <HelloWorld name = "Jon"/> 
+           
         </div>
         
         <Footer/>
