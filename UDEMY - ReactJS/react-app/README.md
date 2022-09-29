@@ -1,4 +1,6 @@
-# Journal - "Build your first React JS Application" by UDEMY
+# Journal - "Build your first React JS Application" by UDEMY 
+
+#### Referenced: https://www.udemy.com/course/build-your-first-react-js-application/
 
 ## Section 1. Creating the ReactJS App
 
@@ -37,6 +39,7 @@
         - Class based approach: Make use of **state** in the constructor of the class
 
 ## 2. Build a Mobile Menu
+
     1. Yarn commands tend to be shorter, less output in the command line
 
     2. Tailwind CSS - JavaScript configurable CSS (since we're building a JS app, it's nice to have CSS that's also configurable) [https://tailwindcss.com/docs/installation/using-postcss]
@@ -62,6 +65,7 @@
         - Remove App.css as we don't need it anymore and replace imports of App.css to tailwind.css
 
 ## 3. Create a Menu component
+
     - Create Navigation.js
     - Install fontawesome packages (https://fontawesome.com/docs/web/use-with/react/)
     - Use state to control hamburger dropdown menu component
@@ -71,6 +75,7 @@
     - Added onClick to mask where if clicked, menu will be closed
 
 ## 4. Animating the Menu Component (with React Spring)
+
     - Add import package (import { useTransition, animated } from 'react-spring') which will break the app 
         - Fix: yarn add react-spring then rebuild and start app
     - Use fade transition for the menu dropdown list
@@ -78,6 +83,7 @@
     - Added CSS for dropdown menu and used transformX to make the list slide in from the left   
 
 ## 5. React Router (Change content on the page, Change URL)
+
     - Add react-router (yarn add react-router-dom <- for websites {react-router-native <- for native apps})
     - Import dependencies to App.js
         - import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
@@ -98,6 +104,7 @@
         - Cleaner code\
 
 ## 6. Fetch data from API
+
     - Used wildcard "/:id" in route to product page
     - To send a request, we use an HTTP library, axios (yarn add axios)
         - Axios is a JavaScript promise based HTTP client. This us to make get, post, put and delete requests to an API.
@@ -107,15 +114,18 @@
     - Used useParams from router library to change the product id dynamic variable
 
 ## 7. CSS loader for HTTP requests and handle errors on failed requests
+
     - Change null in useState argument to an object: loading<boolean> & data<object>
     - Created new file Loader.js (the div for the CSS loader) to be added into the Product page
     - Add CSS for the loader in index.css
 
 ## 8. Fetch from a list of data
+
     - Used map function to display the first images in the list of all products
     - Created file named ProductCard which defines how a card displays the contents of a specific product
 
 ## 9. Create custom hook
+
     - Created useAxiosGet that does the HTTP request to GET data of products.
     = Renamed variable and method in useState to a common name, request and setRequest.
     - Applied the Don't Repeat Yourself (DRY) rule
