@@ -102,4 +102,15 @@ class HelloWorld extends React.Component{
             - Passes the function to the child component (NavigationMenu)
     - Create new files Home.js and About.js
         - Use tags for these file routes in App.js 
-        - Cleaner code
+        - Cleaner code\
+
+6. Fetch data from API
+    - Used wildcard "/:id" in route to product page
+    - To send a request, we use an HTTP library, axios (yarn add axios)
+    - Used hook state to set product shown in "product" page
+    - Used useEffect: 1st argument is the function to run, 2nd argument is the variable we want to monitor, if changed, we want that data to be used
+    - Set content to show if product is not null
+    - Used useParams from router library to change the product id dynamic variable
+
+7. CSS loader for HTTP requests and handle errors on failed requests
+    - 

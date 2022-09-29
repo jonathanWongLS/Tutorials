@@ -1,11 +1,11 @@
 import React from 'react';
 import "./tailwind.css"
-import CounterExample from './Components/CounterExample';
 import HelloWorld from './Components/HelloWorld';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Views/Home';
 import About from './Views/About';
+import Product from './Views/Product';
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,8 +24,10 @@ function App() {
             </Route>
             <Route path='/about' caseSensitive={false} element={<About/>}>
             </Route>
+            <Route path='/product/:id' caseSensitive={false} element={<Product/>}>
+            </Route>
           </Routes>
-          <HelloWorld/> 
+          <HelloWorld name = "Jon"/> 
         </div>
         
         <Footer/>
